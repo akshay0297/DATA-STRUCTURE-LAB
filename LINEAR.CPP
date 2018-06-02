@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+void main ()
+{
+clrscr();
+int a[100] , i , j=0 , k  , n ;
+cin>>n;
+      for(i=0 ;i<n; i++)
+	{
+	 cin>>a[i];
+	}
+cin>>k;
+      for(i=0 ; i<n ;i++)
+	{
+	   if(a[i]==k)
+	     {
+		j=1;
+	     }
+	   else
+	     {
+		j=0;
+	     }
+	}
+if(j==1)
+cout<<"found";
+else
+cout<<"not found";
+getch();
