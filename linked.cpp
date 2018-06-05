@@ -125,9 +125,17 @@ void list :: del_spec()
        else
        {
            list *prev;
-         for(list *curr = first ; curr->data = e && curr != NULL ; prev = curr , curr = curr->link);
-                if(curr == NULL)
-            cout<<"Element Not Found ! "<<endl;
+         for(list *curr = first ; curr->data != e && curr->link != NULL ; prev = curr , curr = curr->link);
+                if(curr->link == NULL)
+                {
+                   if(curr->data == e)
+                   {
+                      prev->link = curr->link;
+                      delete curr ;
+                      cout<<"Value deleted ! ";
+                   }
+                   else cout<<"Element Not Found ! "<<endl;
+                }
          else
             {
                 prev->link = curr->link;
